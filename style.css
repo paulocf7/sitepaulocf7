@@ -1,0 +1,198 @@
+/* Folha de estilo site HTML5 e CSS3 
+ @aUTOR Felipe Lima dos Santos*/
+
+ /*Importação google font*/
+ @import url('https://fonts.googleapis.com/css2?family= Open+Sans:wght@400;700 & display =swap');
+ /* Reset */
+ *{
+    margin: 0;
+    border: 0;
+    padding: 0;
+ }
+ body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em; /* 1em = 16px */
+ }
+/*Layout*/
+.container{
+    margin: 0 auto;
+}
+.Flex{
+    display: flex;
+    justify-content: space-between;
+}
+.Flex2{
+    display: flex;
+    align-items: center;
+}
+.Flex3{
+    display: flex;
+    flex-direction: column;
+}
+.Botao{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.3em;
+    font-weight: 700;
+    background-color: #c00000;
+    padding: 10px 40px;
+    border: 2px solid #fff;
+    border-radius: 25px;
+} 
+/*Topo do site*/
+#topo{
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}
+/*Cabeçalho*/
+header{
+    height: 60px;
+}
+#logo img {
+    width: 96px;
+    height: 96px;
+}
+#check{
+    display: none;
+}
+label {
+    font-size: 3em;
+    position: fixed;
+    top: 5px;
+    right: 15px;
+    color: rgba(0,0,0,0.5);
+}
+nav ul{
+    list-style: none;
+    background-color: #343538;
+    height: 100vh;
+    position: fixed;
+    top: 60px;
+    right: -100%;
+    width: 100%;
+    transition: all 0.5s;
+}
+#check:checked ~ ul{
+    right: 0;
+}
+nav ul li {
+    padding: 20px;
+    border-bottom: 1px solid #a9a9a9;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+/*Destaque*/
+main{
+    height: 75vh;
+    background: url(img/banner.jpg);
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-position: center;
+}
+main h1{ font-size: 2em;}
+main h2{ font-size: 1em;
+margin: 20px 0px 50px 0px;}
+/*Sobre*/
+#Sobre{
+    padding: 50px 0px;
+    background: url(img/background.png);
+    background-size: cover;
+    background-position: center;
+}
+.destaqueSobre{
+    display: none;
+}
+.textoSobre{
+    color: #fff;
+    padding: 0px 10px;
+}
+.textoSobre h2{
+    margin-bottom: 10px;
+} 
+.TopicoSobre{ margin-top: 20px;}
+.TopicoSobre img {margin-right: 10px;}
+/*One Page*/
+#onepage{ padding: 50px 10px;}
+#onepage h2{ margin-bottom: 10px;}
+#onepage p{ margin-bottom: 25px;}
+#video iframe{
+    width: 340px;
+    height: 191px;
+}
+  /*Smartphone Landscape*/
+ @media (min-width: 576px){
+    .container{
+        max-width: 576px;
+    }
+    main h1, main h2{
+        text-shadow: #000 0.05em 0.05em 0.05em;
+    }
+    /*One Page*/
+    #video iframe{
+        width: 560px;
+        height: 315px;
+    }
+ }
+/*Tablet Portrait*/
+@media (min-width: 768px){
+    .container{
+        max-width: 768px;
+    }
+    main{ height: 45vh;}
+    main h1 {font-size: 5.5em;}
+    main h2 {font-size: 2em;}
+ }
+ /*Tablet Landscape*/
+@media (min-width: 992px){
+    .container{
+        max-width: 992px;
+    }
+    main { height: 70vh;}
+ }
+ /* PC */
+ @media (min-width: 1200px){
+    .container{
+        max-width: 1200px;
+    }
+    header{height: 120px;}
+    #logo img { width: 128px;
+        height: 128px;
+        margin-top: 30px;}   
+    label {display: none;}
+    nav ul {
+        position: static;
+        height: auto;
+        background-color: transparent;
+        margin-top: 50px;
+    }
+    nav ul li {
+        float: left;
+        border: 0;
+    }
+    nav ul li a{
+        color: #343538;
+    }
+    nav ul li a:hover{
+        color: #c00000;
+    }
+    /*Sobre*/
+    #Sobre{ background-attachment: fixed;}
+    .destaqueSobre{ display: inline; }
+    .destaqueSobre img{
+        border-radius: 50%;
+        margin-right: 50%;
+    }
+    /*One Page*/
+    .Flex3{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+ }
